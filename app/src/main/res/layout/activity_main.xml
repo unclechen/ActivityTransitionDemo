@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="transition.chen.nought.com.transitiondemo.MainActivity">
+
+    <!-- 这里简单演示center crop，第一个Activity中的scaleType可以和第二个页面不同 -->
+    <ImageView
+        android:id="@+id/imageViewMain"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"/>
+
+    <Button
+        android:id="@+id/btnCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/imageViewMain"
+        android:layout_margin="16dp"
+        android:onClick="buttonClick"
+        android:text="兼容4.x"/>
+
+    <Button
+        android:id="@+id/btnLoL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/imageViewMain"
+        android:layout_margin="16dp"
+        android:onClick="buttonClick"
+        android:text="5.0以上"/>
+
+</RelativeLayout>
